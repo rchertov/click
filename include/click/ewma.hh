@@ -107,6 +107,11 @@ class DirectEWMAX : public P { public:
 	_avg = scaled_value;
     }
 
+    /** @brief  Assign the EWMA to scaled average @a unscaled_value. */
+    inline void assign_unscaled(value_type unscaled_value) {
+	_avg = unscaled_value;
+    }
+
     /** @brief  Update the moving average with a new observation.
      *  @param  x  the observation (unscaled) */
     inline void update(value_type x);
